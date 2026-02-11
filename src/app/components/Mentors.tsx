@@ -65,7 +65,7 @@ function BackgroundCombined() {
 
 function MentorCard1() {
     return (
-        <div className="-translate-x-1/2 absolute h-[852.315px] left-[calc(50%+3px)] top-[350px] w-[1230px]">
+        <div className="sticky top-[120px] mx-auto h-[852.315px] w-full max-w-[1230px] relative mb-[150px] bg-white rounded-[34px] shadow-sm overflow-hidden border border-gray-100">
             <p className="absolute font-['Instrument_Sans',sans-serif] font-bold leading-[36.367px] left-[14px] text-[#303030] text-[39.673px] text-left top-[43px]" style={{ fontVariationSettings: "'wdth' 100" }}>
                 Deepak Mehta
             </p>
@@ -111,7 +111,7 @@ function MentorCard1() {
 
 function MentorCard2() {
     return (
-        <div className="-translate-x-1/2 absolute h-[852.315px] left-[calc(50%+3px)] top-[1371px] w-[1230px]">
+        <div className="sticky top-[150px] mx-auto h-[852.315px] w-full max-w-[1230px] relative bg-white rounded-[34px] shadow-sm overflow-hidden border border-gray-100">
             <p className="-translate-x-1/2 absolute font-['Instrument_Sans',sans-serif] font-bold leading-[36.367px] left-[181px] text-[#303030] text-[39.673px] text-center top-[43px]" style={{ fontVariationSettings: "'wdth' 100" }}>
                 Gautam Shigaokar
             </p>
@@ -157,22 +157,24 @@ function MentorCard2() {
 
 export function Mentors() {
     return (
-        <div className="relative bg-white min-h-[2400px] w-full max-w-[1440px] mx-auto overflow-hidden px-4 md:px-0">
+        <div className="relative bg-white pt-[120px] pb-[100px] w-full max-w-[1440px] mx-auto px-4 md:px-0">
             <BackgroundCombined />
 
             {/* Title */}
-            <div className="absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] left-4 md:left-[80px] text-[48px] md:text-[105.51px] text-black top-[80px] md:top-[122.5px] tracking-[-2px] md:tracking-[-2.6385px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
-                <p className="leading-[1.1] md:leading-[60.792px]">Our Mentors</p>
-            </div>
-            <div className="absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] left-4 md:left-[80px] text-[12px] md:text-[13.127px] text-black top-[140px] md:top-[210px] w-full max-w-[673.496px] pr-4" style={{ fontVariationSettings: "'wdth' 100" }}>
-                <p className="leading-[1.3] md:leading-[17.065px] whitespace-pre-wrap">Our mentors aren't just instructors — they're active builders, designers, and engineers working on real projects. They bring industry experience, practical thinking, and hands-on guidance to help you grow with clarity and confidence.</p>
+            <div data-aos="fade-up" className="relative pl-4 md:pl-[80px] mb-20 z-10">
+                <div className="flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] text-[48px] md:text-[105.51px] text-black tracking-[-2px] md:tracking-[-2.6385px] whitespace-nowrap mb-6" style={{ fontVariationSettings: "'wdth' 100" }}>
+                    <p className="leading-[1.1] md:leading-[1.1]">Our Mentors</p>
+                </div>
+                <div className="flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] text-[12px] md:text-[13.127px] text-black w-full max-w-[673.496px]" style={{ fontVariationSettings: "'wdth' 100" }}>
+                    <p className="leading-[1.3] md:leading-[17.065px] whitespace-pre-wrap">Our mentors aren't just instructors — they're active builders, designers, and engineers working on real projects. They bring industry experience, practical thinking, and hands-on guidance to help you grow with clarity and confidence.</p>
+                </div>
             </div>
 
-            <div className="hidden md:block">
+            <div className="hidden md:flex flex-col gap-10 relative z-20 px-[80px]">
                 <MentorCard1 />
                 <MentorCard2 />
             </div>
-            <div className="md:hidden mt-[250px] px-4 text-center text-gray-500">
+            <div className="md:hidden mt-[50px] px-4 text-center text-gray-500">
                 <p>Mentor profiles are best viewed on larger screens</p>
             </div>
         </div>

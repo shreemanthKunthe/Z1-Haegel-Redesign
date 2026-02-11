@@ -52,8 +52,6 @@ function Card({ title, desc, left, top, delay = "0s", duration = "6s", className
       style={{
         left,
         top,
-        animation: `float ${duration} ease-in-out infinite`,
-        animationDelay: delay
       }}
       data-name="card"
     >
@@ -125,7 +123,10 @@ export function Opportunities() {
       </div>
 
       {/* Heading */}
-      <div className="absolute left-1/2 -translate-x-1/2 top-[80px] md:top-[calc(50%-180px)] w-full max-w-[673.496px] text-center px-4 flex flex-col items-center">
+      <div
+        data-aos="fade-up"
+        className="absolute left-1/2 -translate-x-1/2 top-[80px] md:top-[calc(50%-180px)] w-full max-w-[673.496px] text-center px-4 flex flex-col items-center"
+      >
         <p className="font-['Instrument_Sans',sans-serif] font-normal text-[32px] md:text-[55.678px] leading-[1.1] md:leading-[60.792px] tracking-[-1.5px] md:tracking-[-2.6385px] text-black" style={{ fontVariationSettings: "'wdth' 100" }}>
           Endless Opportunities
         </p>
@@ -153,10 +154,18 @@ export function Opportunities() {
 
       {/* Desktop cards */}
       <div className="hidden md:block">
-        <Card title="Digital Asset Discovery" desc="Locate and catalogue all your online accounts, from streaming services to bank logins." left="208px" top="91px" delay="0s" duration="6s" />
-        <Card title="Password Management" desc="Securely store and manage your passwords with ease, ensuring you never lose access." left="135px" top="516px" delay="1s" duration="7s" />
-        <Card title="Account Monitoring" desc="Receive alerts for suspicious activities on your accounts, helping to protect your assets." left="953px" top="72px" delay="2s" duration="6.5s" />
-        <Card title="Two-Factor Authentication" desc="Enhance your security by enabling two-factor authentication on critical accounts." left="1089px" top="505px" delay="0.5s" duration="7.5s" />
+        <div data-aos="fade-up" data-aos-delay="0">
+          <Card title="Digital Asset Discovery" desc="Locate and catalogue all your online accounts, from streaming services to bank logins." left="208px" top="91px" />
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <Card title="Password Management" desc="Securely store and manage your passwords with ease, ensuring you never lose access." left="135px" top="516px" />
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <Card title="Account Monitoring" desc="Receive alerts for suspicious activities on your accounts, helping to protect your assets." left="953px" top="72px" />
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <Card title="Two-Factor Authentication" desc="Enhance your security by enabling two-factor authentication on critical accounts." left="1089px" top="505px" />
+        </div>
       </div>
 
       {/* Decorative vectors - hide on mobile */}

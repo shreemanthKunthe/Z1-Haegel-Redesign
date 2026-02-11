@@ -156,7 +156,11 @@ function CopyrightLegal() {
 
 export function Footer() {
   return (
-    <div className="relative bg-white w-full max-w-[1440px] mx-auto overflow-hidden rounded-t-[27.961px] mt-20">
+    <div
+      className="relative bg-white w-full max-w-[1440px] mx-auto overflow-hidden rounded-t-[27.961px] mt-20"
+      data-aos="fade-up"
+      data-aos-offset="0"
+    >
       <AccentContainer />
       <Main />
       <CopyrightLegal />

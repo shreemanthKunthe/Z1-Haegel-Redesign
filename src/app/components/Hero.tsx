@@ -96,7 +96,11 @@ function SearchIcon() {
 
 function NavBar() {
   return (
-    <div className="absolute top-[40px] left-0 w-full px-4 md:px-[60px] flex justify-between items-center z-20">
+    <div
+      data-aos="fade-down"
+      data-aos-duration="1200"
+      className="absolute top-[40px] left-0 w-full px-4 md:px-[60px] flex justify-between items-center z-20"
+    >
       <p className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[24px] md:text-[40px] text-black">Z1</p>
       <NavMenu />
       <div className="flex gap-4 items-center">
@@ -172,22 +176,39 @@ export function Hero() {
 
         {/* Hero Text */}
         <div className="relative max-w-[700px] mb-8">
-          <h1 className="font-['Instrument_Sans',sans-serif] font-medium text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.9px] text-black" style={{ fontVariationSettings: "'wdth' 100" }}>
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="font-['Instrument_Sans',sans-serif] font-medium text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.9px] text-black"
+            style={{ fontVariationSettings: "'wdth' 100" }}
+          >
             Build Real Skills. Launch Your Developer Career
           </h1>
 
           {/* Execute Arrow - Absolute relative to the title container */}
-          <div className="hidden lg:block absolute -right-[180px] top-[-40px] pointer-events-none">
+          <div
+            data-aos="fade-in"
+            data-aos-delay="600"
+            className="hidden lg:block absolute -right-[180px] top-[-40px] pointer-events-none"
+          >
             <ExecuteArrow />
           </div>
         </div>
 
-        <p className="font-['Albert_Sans',sans-serif] font-medium text-[16px] md:text-[18px] leading-[1.3] text-gray-800 max-w-[550px] mb-8">
+        <p
+          data-aos="fade-up"
+          data-aos-delay="400"
+          className="font-['Albert_Sans',sans-serif] font-medium text-[16px] md:text-[18px] leading-[1.3] text-gray-800 max-w-[550px] mb-8"
+        >
           Learn by doing, guided by mentors, real-world challenges, and structured learning paths designed to take you from beginner to a confident developer.
         </p>
 
         {/* CTA Button */}
-        <div className="relative inline-block z-20">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="600"
+          className="relative inline-block z-20"
+        >
           <button className="bg-[#1d1d1d] hover:bg-black transition-colors text-white px-8 py-3.5 rounded-lg flex items-center gap-2 font-['Inter',sans-serif] font-semibold text-[14px]">
             <span>Get started</span>
             <ArrowIcon />
@@ -202,7 +223,12 @@ export function Hero() {
       </main>
 
       {/* Hero Video / Bento Grid */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] z-0 pointer-events-none translate-y-[10%]">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="800"
+        data-aos-offset="0"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] z-0 pointer-events-none translate-y-[10%]"
+      >
         <div className="relative w-full rounded-t-2xl overflow-hidden shadow-2xl bg-gray-100">
           <video
             className="w-full h-auto object-contain"

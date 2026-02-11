@@ -177,7 +177,9 @@ export function Partners() {
   return (
     <div className="relative bg-[#1d1d1d] min-h-[600px] w-full max-w-[1440px] mx-auto overflow-hidden px-4 md:px-[80px] pt-[80px] pb-20">
       <div className="content-stretch flex flex-col lg:flex-row items-start relative shrink-0">
-        <Stats />
+        <div data-aos="fade-up">
+          <Stats />
+        </div>
         <div className="hidden lg:block">
           <Logos />
         </div>
