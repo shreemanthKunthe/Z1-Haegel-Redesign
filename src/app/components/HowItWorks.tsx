@@ -125,7 +125,7 @@ function Svgs() {
 
 export function HowItWorks() {
   return (
-    <div className="relative bg-white min-h-[900px] w-full max-w-[1440px] mx-auto overflow-hidden px-4 md:px-0">
+    <div className="relative bg-white min-h-[1100px] w-full max-w-[1440px] mx-auto overflow-hidden px-4 md:px-0">
       <Backgroung3 />
 
       {/* Heading */}
@@ -137,14 +137,14 @@ export function HowItWorks() {
       </div>
 
       {/* Description */}
-      <div className="absolute content-stretch flex flex-col items-start left-4 md:left-[calc(41.67%-2.02px)] pb-[40.236px] pr-4 md:pr-[60.125px] pt-[12.365px] top-[80px] md:top-[134px] max-w-[652.583px]">
+      <div className="absolute content-stretch flex flex-col items-start left-4 md:left-[calc(41.67%-2.02px)] pb-[40.236px] pr-4 md:pr-[60.125px] pt-[12.365px] top-[240px] md:top-[229px] max-w-[652.583px]">
         <div className="flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[14px] md:text-[19.783px] text-black w-full" style={{ fontVariationSettings: "'wdth' 100" }}>
           <p className="leading-[1.3] md:leading-[25.718px] whitespace-pre-wrap">Manage your experience from start to finish, from integrations to registration and from interactive stage elements to post-event data, it's all here.</p>
         </div>
       </div>
 
       {/* Content */}
-      <div className="absolute left-4 md:left-[calc(8.33%+2px)] top-[280px] md:top-[403px] right-4 md:right-0 overflow-x-auto">
+      <div className="absolute left-4 md:left-[calc(8.33%+2px)] top-[400px] md:top-[500px] right-4 md:right-0 overflow-x-auto">
         <div className="min-w-max md:min-w-0">
           <Cards />
         </div>

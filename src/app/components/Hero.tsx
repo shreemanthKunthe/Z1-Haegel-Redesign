@@ -2,9 +2,9 @@ import React from "react";
 import svgPaths from "../../imports/svg-oqus49gwxv";
 import imgBentoGrid from "../../assets/47f541c0e046bff0b94914a0e76c698fbcd23347.png";
 
-function BackgroungLines4() {
+function BackgroundLines() {
   return (
-    <div className="absolute h-[973px] left-0 top-[-39px] w-[1440px] pointer-events-none" data-name="Backgroung Lines">
+    <div className="absolute h-[973px] left-0 top-[-39px] w-[1440px] pointer-events-none select-none z-0">
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1440.53 973">
         <g id="Backgroung Lines">
           <line id="Line 1" stroke="var(--stroke-0, #DFDFDF)" x1="0.264999" x2="1440.27" y1="72.5762" y2="972.576" />
@@ -15,9 +15,9 @@ function BackgroungLines4() {
   );
 }
 
-function BackgroungOllaps4() {
+function BackgroundCircles() {
   return (
-    <div className="absolute left-[calc(8.33%+55px)] size-[1090px] top-[-62px] pointer-events-none" data-name="Backgroung Ollaps">
+    <div className="absolute left-1/2 -translate-x-1/2 top-[-62px] w-[1090px] h-[1090px] pointer-events-none select-none z-0 opacity-60">
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1090 1090">
         <g id="Backgroung Ollaps">
           <circle cx="545" cy="545" id="Ellipse 3" r="544.5" stroke="var(--stroke-0, #DFDFDF)" />
@@ -28,136 +28,90 @@ function BackgroungOllaps4() {
   );
 }
 
-function Backgroung4() {
+function SocialIcons() {
   return (
-    <div className="absolute contents left-0 top-[-62px]" data-name="Backgroung">
-      <BackgroungLines4 />
-      <BackgroungOllaps4 />
+    <div className="hidden lg:flex absolute flex-col gap-[36px] items-center left-[40px] xl:left-[67px] top-[385px] z-10">
+      {['behance', 'twitter', 'instagram', 'facebook'].map((social) => (
+        <div key={social} className="flex items-center justify-center shrink-0 w-[20px] h-[60px]">
+          <div className="-rotate-90 whitespace-nowrap">
+            <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[10px] text-black hover:text-gray-600 transition-colors cursor-pointer capitalize">
+              {social}
+            </p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
 
-function SocialSitesLink() {
+function DesignerCredit() {
   return (
-    <div className="hidden lg:flex absolute content-stretch flex-col gap-[36px] items-start left-[67px] top-[385px] z-10" data-name="Social sites link">
-      <div className="flex h-[43px] items-center justify-center relative shrink-0 w-[13px]" style={{ "--transform-inner-width": "1185", "--transform-inner-height": "21" } as React.CSSProperties}>
-        <div className="-rotate-90 flex-none">
-          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium leading-[normal] relative text-[10px] text-black">behance</p>
-        </div>
-      </div>
-      <div className="flex h-[33px] items-center justify-center relative shrink-0 w-[13px]" style={{ "--transform-inner-width": "1185", "--transform-inner-height": "21" } as React.CSSProperties}>
-        <div className="-rotate-90 flex-none">
-          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium leading-[normal] relative text-[10px] text-black">twitter</p>
-        </div>
-      </div>
-      <div className="flex h-[48px] items-center justify-center relative shrink-0 w-[13px]" style={{ "--transform-inner-width": "1185", "--transform-inner-height": "21" } as React.CSSProperties}>
-        <div className="-rotate-90 flex-none">
-          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium leading-[normal] relative text-[10px] text-black">instagram</p>
-        </div>
-      </div>
-      <div className="flex h-[48px] items-center justify-center relative shrink-0 w-[13px]" style={{ "--transform-inner-width": "1185", "--transform-inner-height": "21" } as React.CSSProperties}>
-        <div className="-rotate-90 flex-none">
-          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium leading-[normal] relative text-[10px] text-black">facebook</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Designer() {
-  return (
-    <div className="hidden lg:block absolute right-[45px] top-[50%] -translate-y-1/2 z-10" data-name="Designer">
-      <div className="flex items-center justify-center rotate-90 origin-center">
-        <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium leading-[0] relative text-[12px] text-black tracking-[0.48px] whitespace-nowrap">
-          <span className="leading-[normal]">{`Designed by `}</span>
-          <span className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold leading-[normal]">{` Shreemanth K`}</span>
+    <div className="hidden lg:block absolute right-[45px] top-[50%] -translate-y-1/2 z-10">
+      <div className="rotate-90 origin-center whitespace-nowrap">
+        <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[12px] text-black tracking-[0.48px] leading-[normal]">
+          Designed by <span className="font-extrabold text-black">Shreemanth K</span>
         </p>
       </div>
     </div>
   );
 }
 
-function User() {
-  return (
-    <div className="size-[24px]" data-name="user">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
-        <g id="user">
-          <path d={svgPaths.p82039c0} id="Vector" stroke="var(--stroke-0, #646464)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-          <path d={svgPaths.p2c19cb00} id="Vector_2" stroke="var(--stroke-0, #646464)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
-function Search() {
-  return (
-    <div className="size-[24px]" data-name="search">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
-        <g id="search">
-          <path d={svgPaths.p19568f00} id="Vector" stroke="var(--stroke-0, #646464)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-          <path d="M21 21L16.65 16.65" id="Vector_2" stroke="var(--stroke-0, #646464)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
 function NavMenu() {
   return (
-    <div className="flex font-['Plus_Jakarta_Sans',sans-serif] font-medium gap-[36px] items-center text-[16px] text-black" data-name="Nav menu">
-      <p className="relative shrink-0 cursor-pointer hover:text-gray-600">home</p>
-      <p className="relative shrink-0 cursor-pointer hover:text-gray-600">projects</p>
-      <p className="relative shrink-0 cursor-pointer hover:text-gray-600">work</p>
-      <p className="relative shrink-0 cursor-pointer hover:text-gray-600">about us</p>
-      <p className="relative shrink-0 cursor-pointer hover:text-gray-600">contact</p>
+    <div className="hidden md:flex font-['Plus_Jakarta_Sans',sans-serif] font-medium gap-[36px] items-center text-[16px] text-black">
+      {['home', 'projects', 'work', 'about us', 'contact'].map((item) => (
+        <p key={item} className="relative shrink-0 cursor-pointer hover:text-gray-600 transition-colors">
+          {item}
+        </p>
+      ))}
+    </div>
+  );
+}
+
+function UserIcon() {
+  return (
+    <div className="size-[24px]">
+      <svg className="block size-full" fill="none" viewBox="0 0 24 24">
+        <g>
+          <path d={svgPaths.p82039c0} stroke="var(--stroke-0, #646464)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+          <path d={svgPaths.p2c19cb00} stroke="var(--stroke-0, #646464)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function SearchIcon() {
+  return (
+    <div className="size-[24px]">
+      <svg className="block size-full" fill="none" viewBox="0 0 24 24">
+        <g>
+          <path d={svgPaths.p19568f00} stroke="var(--stroke-0, #646464)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+          <path d="M21 21L16.65 16.65" stroke="var(--stroke-0, #646464)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+        </g>
+      </svg>
     </div>
   );
 }
 
 function NavBar() {
   return (
-    <div className="absolute left-4 md:left-[60px] top-[40px] right-4 md:right-[60px] flex justify-between items-center z-20" data-name="Nav Bar">
+    <div className="absolute top-[40px] left-0 w-full px-4 md:px-[60px] flex justify-between items-center z-20">
       <p className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[24px] md:text-[40px] text-black">Z1</p>
-      <div className="hidden md:block">
-        <NavMenu />
-      </div>
-      <div className="flex gap-4">
-        <Search />
-        <User />
+      <NavMenu />
+      <div className="flex gap-4 items-center">
+        <SearchIcon />
+        <UserIcon />
       </div>
     </div>
   );
 }
 
-function Button() {
+function ArrowIcon() {
   return (
-    <div className="absolute left-1/2 -translate-x-1/2 bg-[#ffa850] h-[29px] overflow-clip rounded-[82.069px] top-0 w-[274px] flex items-center justify-center" data-name="Button">
-      <p className="font-['Poppins',sans-serif] font-semibold text-[13.131px] text-black whitespace-nowrap">Join over 1000,000 happy developers</p>
-    </div>
-  );
-}
-
-function Frame4() {
-  return (
-    <div className="absolute top-[49px] left-0 w-full flex flex-col items-center text-center px-4">
-      <p className="font-['Instrument_Sans',sans-serif] font-medium text-[28px] md:text-[48.17px] leading-[1.2] md:leading-[56.588px] tracking-[-0.9353px] w-full max-w-[681px]" style={{ fontVariationSettings: "'wdth' 100" }}>
-        Build Real Skills. Launch Your Developer Career
-      </p>
-      <p className="font-['Albert_Sans',sans-serif] font-medium text-[14px] md:text-[18px] leading-[1.2] mt-4 md:mt-6 w-full max-w-[549px]">
-        Learn by doing , guided by mentors, real-world challenges, and structured learning paths designed to take you from beginner to confident developer.
-      </p>
-    </div>
-  );
-}
-
-function ArrowAccent1() {
-  return (
-    <div className="h-[13.913px] relative shrink-0 w-[10.435px]" data-name="arrow-accent">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10.4348 13.913">
-        <g id="arrow-accent">
-          <path d={svgPaths.p12663e00} fill="url(#paint0_linear_1_892)" id="accent" />
-        </g>
+    <div className="h-[14px] w-[10px] relative">
+      <svg className="block size-full" fill="none" viewBox="0 0 10.4348 13.913">
+        <path d={svgPaths.p12663e00} fill="url(#paint0_linear_1_892)" />
         <defs>
           <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_892" x1="5.21739" x2="5.21739" y1="0" y2="13.913">
             <stop stopColor="white" />
@@ -169,82 +123,103 @@ function ArrowAccent1() {
   );
 }
 
-function Primary1() {
+function ExecuteArrow() {
   return (
-    <div className="absolute left-1/2 -translate-x-1/2 top-[265px] bg-[#1d1d1d] flex gap-[6.957px] items-center justify-center px-[27.826px] py-[13.913px] rounded-[6.957px] cursor-pointer hover:bg-black transition-colors" data-name="primary">
-      <p className="font-['Inter',sans-serif] font-semibold text-[13.913px] text-white">Get started</p>
-      <ArrowAccent1 />
+    <div className="w-[154px] h-[143px] relative rotate-[18.63deg]">
+      <svg className="block size-full" fill="none" viewBox="0 0 155.374 144.374">
+        <path d={svgPaths.p34dfa00} stroke="black" strokeLinecap="round" strokeWidth="1.37366" />
+      </svg>
     </div>
   );
 }
 
-function Frame6() {
+function ItsFreeArrow() {
   return (
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1220px] h-[249px] px-4">
-      {/* Button and Text */}
-      <div className="absolute left-1/2 -translate-x-1/2 top-0 w-full max-w-[643px] h-[249px]">
-        <Button />
-        <Frame4 />
-      </div>
-
-      {/* Decorative Arrow/Star thing - hide on mobile */}
-      <div className="hidden lg:block absolute left-[842px] top-0 w-[191.611px] h-[184.701px] flex items-center justify-center">
-        <div className="flex-none rotate-[18.63deg]">
-          <div className="h-[143px] relative w-[154px]" data-name="Vector">
-            <div className="absolute inset-[-0.48%_-0.45%]">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155.374 144.374">
-                <path d={svgPaths.p34dfa00} id="Vector" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeWidth="1.37366" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="w-[70px] h-[52px] relative">
+      <svg className="block size-full" fill="none" viewBox="0 0 70.593 51.9292">
+        <path d={svgPaths.p788e7c0} stroke="black" strokeLinecap="round" strokeWidth="1.26884" />
+      </svg>
     </div>
-  );
-}
-
-function Frame7() {
-  return (
-    <div className="absolute top-[calc(50%-134.43px)] left-0 w-full h-[409.148px]">
-      <Frame6 />
-      <Primary1 />
-      <div className="absolute h-[50.66px] left-[453px] top-[310px] w-[69.324px]" data-name="Vector">
-        <div className="absolute inset-[-1.25%_-0.92%]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 70.593 51.9292">
-            <path d={svgPaths.p788e7c0} id="Vector" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeWidth="1.26884" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function BentoGrid() {
-  return (
-    <div className="absolute left-1/2 -translate-x-1/2 top-[519px] w-full max-w-[1161px] h-auto aspect-[1161/477] px-4" data-name="Bento grid">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="Bento Grid" className="absolute h-[136.91%] left-0 max-w-none top-[-13.74%] w-full object-contain" src={imgBentoGrid} />
-      </div>
-      {/* Frame8 and Bento were empty/placeholders in original, but the imgBentoGrid seems to contain the visual */}
-    </div>
-  );
+  )
 }
 
 export function Hero() {
   return (
-    <div className="relative bg-white min-h-[996px] w-full max-w-[1440px] mx-auto overflow-hidden px-4 md:px-0">
-      {/* Hero Blur Background */}
-      <div className="absolute inset-0 z-0">
-        {/* Using a placeholder for the blur since it was a div with ID in original */}
-        <div className="absolute left-[317px] top-[-280px] w-full h-full bg-blue-100/20 blur-3xl opacity-50 rounded-full mix-blend-multiply filter"></div>
+    <div className="relative bg-white min-h-[1100px] w-full max-w-[1440px] mx-auto overflow-hidden">
+
+      {/* Background Elements */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Blur effect */}
+        <div className="absolute left-[317px] top-[-280px] w-full h-full bg-blue-100/20 blur-3xl opacity-50 rounded-full mix-blend-multiply pointer-events-none"></div>
+        <BackgroundLines />
+        <BackgroundCircles />
       </div>
 
-      <Backgroung4 />
-      <SocialSitesLink />
-      <Designer />
+      <SocialIcons />
+      <DesignerCredit />
       <NavBar />
-      <Frame7 />
-      <BentoGrid />
+
+      <main className="relative z-10 flex flex-col items-center justify-center pt-[140px] sm:pt-[160px] md:pt-[200px] px-4 text-center">
+
+        {/* Top Badge */}
+        <div className="relative mb-8">
+          <div className="bg-[#ffa850] rounded-full px-6 py-1.5 overflow-hidden">
+            <p className="font-['Poppins',sans-serif] font-semibold text-[13px] text-black whitespace-nowrap">
+              Join over 1,000,000 happy developers
+            </p>
+          </div>
+        </div>
+
+        {/* Hero Text */}
+        <div className="relative max-w-[700px] mb-8">
+          <h1 className="font-['Instrument_Sans',sans-serif] font-medium text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.9px] text-black" style={{ fontVariationSettings: "'wdth' 100" }}>
+            Build Real Skills. Launch Your Developer Career
+          </h1>
+
+          {/* Execute Arrow - Absolute relative to the title container */}
+          <div className="hidden lg:block absolute -right-[180px] top-[-40px] pointer-events-none">
+            <ExecuteArrow />
+          </div>
+        </div>
+
+        <p className="font-['Albert_Sans',sans-serif] font-medium text-[16px] md:text-[18px] leading-[1.3] text-gray-800 max-w-[550px] mb-8">
+          Learn by doing, guided by mentors, real-world challenges, and structured learning paths designed to take you from beginner to a confident developer.
+        </p>
+
+        {/* CTA Button */}
+        <div className="relative inline-block z-20">
+          <button className="bg-[#1d1d1d] hover:bg-black transition-colors text-white px-8 py-3.5 rounded-lg flex items-center gap-2 font-['Inter',sans-serif] font-semibold text-[14px]">
+            <span>Get started</span>
+            <ArrowIcon />
+          </button>
+
+          {/* It's Free Arrow - Absolute relative to button */}
+          <div className="hidden md:block absolute -left-[80px] top-[10px] pointer-events-none">
+            <ItsFreeArrow />
+          </div>
+        </div>
+
+      </main>
+
+      {/* Hero Video / Bento Grid */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] z-0 pointer-events-none translate-y-[10%]">
+        <div className="relative w-full rounded-t-2xl overflow-hidden shadow-2xl bg-gray-100">
+          <video
+            className="w-full h-auto object-contain"
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={imgBentoGrid}
+          >
+            <source src="./Videos/Scene (3).mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Overlay gradient for better blending if needed */}
+          <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent pointer-events-none"></div>
+        </div>
+      </div>
+
     </div>
   );
 }

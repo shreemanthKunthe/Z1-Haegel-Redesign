@@ -144,10 +144,10 @@ export function Testimonials() {
             <Backgroung1 />
 
             {/* Text */}
-            <div className="absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] left-4 md:left-[116px] text-[48px] md:text-[105.51px] text-black top-[80px] md:top-[121.5px] tracking-[-2px] md:tracking-[-2.6385px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+            <div className="absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] left-4 md:left-[80px] text-[48px] md:text-[105.51px] text-black top-[80px] md:top-[121.5px] tracking-[-2px] md:tracking-[-2.6385px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
                 <p className="leading-[1.1] md:leading-[60.792px]">Testimonials</p>
             </div>
-            <div className="absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] left-4 md:left-[116px] text-[12px] md:text-[13.127px] text-black top-[140px] md:top-[201.5px] w-full max-w-[673.496px] pr-4" style={{ fontVariationSettings: "'wdth' 100" }}>
+            <div className="absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] left-4 md:left-[80px] text-[12px] md:text-[13.127px] text-black top-[140px] md:top-[201.5px] w-full max-w-[673.496px] pr-4" style={{ fontVariationSettings: "'wdth' 100" }}>
                 <p className="leading-[1.3] md:leading-[17.065px] whitespace-pre-wrap">Growth looks different for everyone — but consistent learning leads to real change. Hear from learners who built skills, gained confidence, and turned knowledge into action.</p>
             </div>
 

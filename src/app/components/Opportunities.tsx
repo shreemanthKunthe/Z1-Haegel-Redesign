@@ -36,10 +36,28 @@ function Backgroung2() {
   );
 }
 
-function Card({ title, desc, left, top }: { title: string, desc: string, left: string, top: string }) {
+const floatStyle = `
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+`;
+
+function Card({ title, desc, left, top, delay = "0s", duration = "6s", className = "absolute" }: { title: string, desc: string, left?: string, top?: string, delay?: string, duration?: string, className?: string }) {
   return (
-    <div className={`absolute bg-white content-stretch flex flex-col gap-[15.884px] h-[274px] items-start p-[10.589px] rounded-[5.295px] w-[247.527px]`} style={{ left, top }} data-name="card">
-      <div aria-hidden="true" className="absolute border-[#dcdcdc] border-[0.662px] border-solid inset-0 pointer-events-none rounded-[5.295px] shadow-[9px_133px_37px_0px_rgba(0,0,0,0),5px_85px_34px_0px_rgba(0,0,0,0.01),3px_48px_29px_0px_rgba(0,0,0,0.05),1px_21px_21px_0px_rgba(0,0,0,0.09),0px_5px_12px_0px_rgba(0,0,0,0.1)]" />
+    <div
+      onClick={() => console.log(`Clicked on ${title}`)}
+      className={`${className} bg-white content-stretch flex flex-col gap-[15.884px] h-[274px] items-start p-[10.589px] rounded-[5.295px] w-[247.527px] cursor-pointer hover:scale-105 transition-all shadow-lg hover:shadow-xl z-10`}
+      style={{
+        left,
+        top,
+        animation: `float ${duration} ease-in-out infinite`,
+        animationDelay: delay
+      }}
+      data-name="card"
+    >
+      <div aria-hidden="true" className="absolute border-[#dcdcdc] border-[0.662px] border-solid inset-0 pointer-events-none rounded-[5.295px]" />
       <div className="h-[168.768px] relative rounded-[3.971px] shrink-0 w-full" data-name="img">
         <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[3.971px]">
           <img alt="" className="absolute max-w-none object-cover rounded-[3.971px] size-full" src={imgImg} />
@@ -86,7 +104,7 @@ function ArrowAccent() {
 
 function Primary() {
   return (
-    <div className="absolute left-1/2 -translate-x-1/2 top-[522.27px] bg-[#1d1d1d] flex gap-[5.517px] items-center justify-center px-[22.069px] py-[11.034px] rounded-[5.517px] cursor-pointer hover:bg-black transition-colors" data-name="primary">
+    <div className="bg-[#1d1d1d] flex gap-[5.517px] items-center justify-center px-[22.069px] py-[11.034px] rounded-[5.517px] cursor-pointer hover:bg-black transition-colors" data-name="primary">
       <p className="font-['Inter',sans-serif] font-semibold text-[11.034px] text-white">Explore now</p>
       <ArrowAccent />
     </div>
@@ -96,6 +114,7 @@ function Primary() {
 export function Opportunities() {
   return (
     <div className="relative bg-white min-h-[900px] w-full max-w-[1440px] mx-auto overflow-hidden px-4 md:px-0">
+      <style>{floatStyle}</style>
       <Backgroung2 />
 
       {/* Circle Background - hide on mobile */}
@@ -106,29 +125,38 @@ export function Opportunities() {
       </div>
 
       {/* Heading */}
-      <div className="absolute left-1/2 -translate-x-1/2 top-[80px] md:top-[calc(50%-150px)] w-full max-w-[673.496px] text-center px-4">
+      <div className="absolute left-1/2 -translate-x-1/2 top-[80px] md:top-[calc(50%-180px)] w-full max-w-[673.496px] text-center px-4 flex flex-col items-center">
         <p className="font-['Instrument_Sans',sans-serif] font-normal text-[32px] md:text-[55.678px] leading-[1.1] md:leading-[60.792px] tracking-[-1.5px] md:tracking-[-2.6385px] text-black" style={{ fontVariationSettings: "'wdth' 100" }}>
           Endless Opportunities
         </p>
-        <p className="font-['Instrument_Sans',sans-serif] font-normal text-[12px] md:text-[13.127px] leading-[1.3] md:leading-[17.065px] text-black mt-4">
+        <p className="font-['Instrument_Sans',sans-serif] font-normal text-[12px] md:text-[13.127px] leading-[1.3] md:leading-[17.065px] text-black mt-4 mb-8">
           Our courses are structured around practical learning — not passive watching. Each path is designed to strengthen fundamentals, push hands-on execution, and guide you toward real-world confidence. Learn progressively, build consistently, and grow with clarity.
         </p>
+
+        <div className="relative">
+          <Primary />
+          <div className="hidden md:block absolute -left-[80px] top-[0px] pointer-events-none w-[70px] h-[52px]">
+            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 70.593 51.9292">
+              <path d={svgPaths.p788e7c0} id="Vector" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeWidth="1.26884" />
+            </svg>
+          </div>
+        </div>
       </div>
 
       {/* Cards - responsive grid on mobile, absolute positioning on desktop */}
-      <div className="md:hidden absolute top-[280px] left-4 right-4 grid grid-cols-1 gap-4">
-        <Card title="Digital Asset Discovery" desc="Locate and catalogue all your online accounts, from streaming services to bank logins." left="0" top="0" />
-        <Card title="Password Management" desc="Securely store and manage your passwords with ease, ensuring you never lose access." left="0" top="0" />
-        <Card title="Account Monitoring" desc="Receive alerts for suspicious activities on your accounts, helping to protect your assets." left="0" top="0" />
-        <Card title="Two-Factor Authentication" desc="Enhance your security by enabling two-factor authentication on critical accounts." left="0" top="0" />
+      <div className="md:hidden absolute top-[280px] left-4 right-4 grid grid-cols-1 gap-6 justify-items-center">
+        <Card title="Digital Asset Discovery" desc="Locate and catalogue all your online accounts, from streaming services to bank logins." className="relative" />
+        <Card title="Password Management" desc="Securely store and manage your passwords with ease, ensuring you never lose access." className="relative" delay="1s" />
+        <Card title="Account Monitoring" desc="Receive alerts for suspicious activities on your accounts, helping to protect your assets." className="relative" delay="2s" />
+        <Card title="Two-Factor Authentication" desc="Enhance your security by enabling two-factor authentication on critical accounts." className="relative" delay="3s" />
       </div>
 
       {/* Desktop cards */}
       <div className="hidden md:block">
-        <Card title="Digital Asset Discovery" desc="Locate and catalogue all your online accounts, from streaming services to bank logins." left="208px" top="91px" />
-        <Card title="Password Management" desc="Securely store and manage your passwords with ease, ensuring you never lose access." left="135px" top="516px" />
-        <Card title="Account Monitoring" desc="Receive alerts for suspicious activities on your accounts, helping to protect your assets." left="953px" top="72px" />
-        <Card title="Two-Factor Authentication" desc="Enhance your security by enabling two-factor authentication on critical accounts." left="1089px" top="505px" />
+        <Card title="Digital Asset Discovery" desc="Locate and catalogue all your online accounts, from streaming services to bank logins." left="208px" top="91px" delay="0s" duration="6s" />
+        <Card title="Password Management" desc="Securely store and manage your passwords with ease, ensuring you never lose access." left="135px" top="516px" delay="1s" duration="7s" />
+        <Card title="Account Monitoring" desc="Receive alerts for suspicious activities on your accounts, helping to protect your assets." left="953px" top="72px" delay="2s" duration="6.5s" />
+        <Card title="Two-Factor Authentication" desc="Enhance your security by enabling two-factor authentication on critical accounts." left="1089px" top="505px" delay="0.5s" duration="7.5s" />
       </div>
 
       {/* Decorative vectors - hide on mobile */}
@@ -144,15 +172,7 @@ export function Opportunities() {
         </div>
       </div>
 
-      <div className="hidden md:block absolute h-[50.66px] left-[597px] top-[560px] w-[69.324px] pointer-events-none" data-name="Vector">
-        <div className="absolute inset-[-1.25%_-0.92%]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 70.593 51.9292">
-            <path d={svgPaths.p788e7c0} id="Vector" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeWidth="1.26884" />
-          </svg>
-        </div>
-      </div>
 
-      <Primary />
     </div>
   );
 }

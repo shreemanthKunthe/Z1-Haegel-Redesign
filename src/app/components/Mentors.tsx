@@ -65,57 +65,53 @@ function BackgroundCombined() {
 
 function MentorCard1() {
     return (
-        <>
-            <div className="absolute h-[81px] left-[calc(8.33%+2px)] top-[310px] w-[348.796px]">
-                <p className="-translate-x-1/2 absolute font-['Instrument_Sans',sans-serif] font-bold leading-[36.367px] left-[131.5px] text-[#303030] text-[39.673px] text-center top-[49px]" style={{ fontVariationSettings: "'wdth' 100" }}>
-                    Deepak Mehta
-                </p>
-            </div>
-            <p className="absolute font-['Instrument_Sans',sans-serif] font-normal leading-[18.455px] left-[calc(8.33%+0.03px)] text-[11px] text-[rgba(48,48,48,0.96)] top-[402.96px] w-[177px] whitespace-pre-wrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+        <div className="-translate-x-1/2 absolute h-[852.315px] left-[calc(50%+3px)] top-[350px] w-[1230px]">
+            <p className="absolute font-['Instrument_Sans',sans-serif] font-bold leading-[36.367px] left-[14px] text-[#303030] text-[39.673px] text-left top-[43px]" style={{ fontVariationSettings: "'wdth' 100" }}>
+                Deepak Mehta
+            </p>
+            <p className="absolute font-['Instrument_Sans',sans-serif] font-normal leading-[18.455px] left-[14px] text-[11px] text-[rgba(48,48,48,0.96)] top-[84px] w-[177px] whitespace-pre-wrap" style={{ fontVariationSettings: "'wdth' 100" }}>
                 kenzi.lawson@example.com
             </p>
-            <div className="absolute h-[609.703px] left-[calc(8.33%-1px)] rounded-[34.044px] top-[560.65px] w-[489px] overflow-hidden">
-                <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full" src={imgRectangle4} />
-                {/* Overlays? The original code had multiple imgs, maybe fallbacks or layers. */}
-                <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full opacity-0" src={imgRectangle5} />
-                <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full opacity-0" src={imgRectangle3} />
+            <div className="absolute h-[609.703px] left-px rounded-[34.044px] top-[242.61px] w-[489px] overflow-hidden">
+                <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[34.044px]">
+                    <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full" src="/images/mentor1.png" />
+                    <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full opacity-0" src={imgRectangle5} />
+                    <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full opacity-0" src={imgRectangle3} />
+                </div>
             </div>
 
-            {/* Description Text */}
-            <div className="-translate-y-1/2 absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[22px] left-[calc(50%+12px)] text-[#303030] text-[16px] top-[757px] w-[618px] whitespace-pre-wrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+            <div className="absolute bottom-[714.35px] h-[6px] right-[629px] w-[601px]" data-name="Background">
+                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBackground} />
+            </div>
+
+            <div className="absolute bottom-[661.82px] flex flex-col font-['Instrument_Sans',sans-serif] font-medium h-[13px] justify-center leading-[0] right-[1216px] text-[#5e5e5e] text-[9.582px] translate-x-full translate-y-1/2 w-[47px]">
+                <p className="leading-[normal] whitespace-pre-wrap">More Info</p>
+            </div>
+            <div className="absolute bottom-[680.82px] flex flex-col font-['Instrument_Sans',sans-serif] font-semibold h-[17px] justify-center leading-[0] right-[1216px] text-[#898989] text-[11px] translate-x-full translate-y-1/2 w-[297px]">
+                <p className="leading-[normal] whitespace-pre-wrap">{`TALGH / ART DIRECTION,3D DESIGN + MOTION,R&D`}</p>
+            </div>
+
+            <div className="-translate-y-1/2 absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[22px] left-[622px] text-[#303030] text-[16px] top-[398px] w-[618px] whitespace-pre-wrap" style={{ fontVariationSettings: "'wdth' 100" }}>
                 <p className="mb-0">I usually open learning apps when I’m already tired — late at night or after long workdays. Most of the time, I end up closing them before I even start because everything feels too heavy.</p>
                 <p className="mb-0">&nbsp;</p>
                 <p>This experience felt different. It didn’t ask me to push harder or stay longer. It simply met me where I was. Being able to choose how much energy I had before reading made learning feel possible again, even on days when my focus was low.</p>
             </div>
-            <p className="absolute font-['Instrument_Sans',sans-serif] font-normal leading-[22px] left-[calc(50%+12px)] text-[#303030] text-[16px] top-[873px] w-[507px] whitespace-pre-wrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+            <p className="absolute font-['Instrument_Sans',sans-serif] font-normal leading-[22px] left-[622px] text-[#303030] text-[16px] top-[512px] w-[507px] whitespace-pre-wrap" style={{ fontVariationSettings: "'wdth' 100" }}>
                 I didn’t feel rushed. I didn’t feel behind. I just felt okay showing up.
             </p>
-
-            {/* Divider lines/Background elements */}
-            <div className="absolute bottom-[1709px] h-[6px] right-[calc(50%-1px)] w-[601px]" data-name="Background">
+            <div className="absolute bottom-[596.35px] h-[6px] right-[262px] w-[356px]" data-name="Background">
                 <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBackground} />
             </div>
-            <div className="absolute bottom-[1591px] h-[6px] right-[calc(25%-8px)] w-[356px]" data-name="Background">
-                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBackground} />
-            </div>
-
-            {/* Labels */}
-            <div className="absolute bottom-[1667.5px] flex flex-col font-['Instrument_Sans',sans-serif] font-medium h-[13px] justify-center leading-[0] right-[calc(83.33%+120px)] text-[#5e5e5e] text-[9.582px] translate-x-full translate-y-1/2 w-[47px]">
-                <p className="leading-[normal] whitespace-pre-wrap">More Info</p>
-            </div>
-            <div className="absolute bottom-[1686.5px] flex flex-col font-['Instrument_Sans',sans-serif] font-semibold h-[17px] justify-center leading-[0] right-[calc(66.67%+360px)] text-[#898989] text-[11px] translate-x-full translate-y-1/2 w-[297px]">
-                <p className="leading-[normal] whitespace-pre-wrap">{`TALGH / ART DIRECTION,3D DESIGN + MOTION,R&D`}</p>
-            </div>
-            <div className="absolute bottom-[1558.47px] flex flex-col font-['Instrument_Sans',sans-serif] font-semibold h-[13.067px] justify-center leading-[0] right-[calc(41.67%+110px)] text-[#5e5e5e] text-[11px] translate-x-full translate-y-1/2 w-[42.686px]">
+            <div className="absolute bottom-[566.78px] flex flex-col font-['Instrument_Sans',sans-serif] font-semibold h-[13.067px] justify-center leading-[0] right-[608px] text-[#5e5e5e] text-[11px] translate-x-full translate-y-1/2 w-[42.686px]">
                 <p className="leading-[normal] whitespace-pre-wrap">Bio</p>
             </div>
-        </>
+        </div>
     )
 }
 
 function MentorCard2() {
     return (
-        <div className="-translate-x-1/2 absolute h-[852.315px] left-[calc(50%+3px)] top-[1261px] w-[1230px]">
+        <div className="-translate-x-1/2 absolute h-[852.315px] left-[calc(50%+3px)] top-[1371px] w-[1230px]">
             <p className="-translate-x-1/2 absolute font-['Instrument_Sans',sans-serif] font-bold leading-[36.367px] left-[181px] text-[#303030] text-[39.673px] text-center top-[43px]" style={{ fontVariationSettings: "'wdth' 100" }}>
                 Gautam Shigaokar
             </p>
@@ -124,7 +120,7 @@ function MentorCard2() {
             </p>
             <div className="absolute h-[609.703px] left-px rounded-[34.044px] top-[242.61px] w-[489px] overflow-hidden">
                 <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[34.044px]">
-                    <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full" src={imgRectangle4} />
+                    <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full" src="/images/mentor2.png" />
                     <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full opacity-0" src={imgRectangle5} />
                     <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full opacity-0" src={imgRectangle6} />
                 </div>
@@ -161,14 +157,14 @@ function MentorCard2() {
 
 export function Mentors() {
     return (
-        <div className="relative bg-white min-h-[2205px] w-full max-w-[1440px] mx-auto overflow-hidden px-4 md:px-0">
+        <div className="relative bg-white min-h-[2400px] w-full max-w-[1440px] mx-auto overflow-hidden px-4 md:px-0">
             <BackgroundCombined />
 
             {/* Title */}
-            <div className="absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] left-4 md:left-[calc(8.33%-1px)] text-[48px] md:text-[105.51px] text-black top-[80px] md:top-[122.5px] tracking-[-2px] md:tracking-[-2.6385px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+            <div className="absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] left-4 md:left-[80px] text-[48px] md:text-[105.51px] text-black top-[80px] md:top-[122.5px] tracking-[-2px] md:tracking-[-2.6385px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
                 <p className="leading-[1.1] md:leading-[60.792px]">Our Mentors</p>
             </div>
-            <div className="absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] left-4 md:left-[calc(8.33%-1px)] text-[12px] md:text-[13.127px] text-black top-[140px] md:top-[211px] w-full max-w-[673.496px] pr-4" style={{ fontVariationSettings: "'wdth' 100" }}>
+            <div className="absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] left-4 md:left-[80px] text-[12px] md:text-[13.127px] text-black top-[140px] md:top-[210px] w-full max-w-[673.496px] pr-4" style={{ fontVariationSettings: "'wdth' 100" }}>
                 <p className="leading-[1.3] md:leading-[17.065px] whitespace-pre-wrap">Our mentors aren't just instructors — they're active builders, designers, and engineers working on real projects. They bring industry experience, practical thinking, and hands-on guidance to help you grow with clarity and confidence.</p>
             </div>
 
