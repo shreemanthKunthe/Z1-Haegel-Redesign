@@ -49,7 +49,7 @@ function FeatureBox() {
 
 function JoinUsText() {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-end w-full mb-12 sticky top-[100px] z-10 mix-blend-difference">
+    <div className="flex flex-col md:flex-row justify-between items-end w-full mb-12" data-aos="fade-up">
       <div className="font-['Instrument_Sans',sans-serif] font-normal text-[80px] md:text-[105px] text-white tracking-[-5px] leading-[1]" style={{ fontVariationSettings: "'wdth' 100" }}>
         Join us
       </div>
@@ -63,10 +63,10 @@ function JoinUsText() {
 
 export function JoinUs() {
   return (
-    <div className="relative bg-[#1d1d1d] w-full max-w-[1440px] mx-auto px-4 md:px-[80px] py-[100px] min-h-[1200px]">
+    <div className="relative bg-[#1d1d1d] w-full max-w-[1440px] mx-auto px-4 md:px-[80px] py-[100px]">
       <div className="relative h-full flex flex-col justify-start">
         <JoinUsText />
-        <div className="mt-[50px] md:mt-[100px]">
+        <div className="mt-[50px] md:mt-[100px]" data-aos="fade-up" data-aos-delay="200">
           <FeatureBox />
         </div>
       </div>
