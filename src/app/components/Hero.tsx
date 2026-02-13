@@ -1,6 +1,7 @@
 import React from "react";
 import svgPaths from "../../imports/svg-oqus49gwxv";
 import imgBentoGrid from "../../assets/47f541c0e046bff0b94914a0e76c698fbcd23347.png";
+import videoSrc from "../../../Videos/Scene (3).mp4";
 
 function BackgroundLines() {
   return (
@@ -238,7 +239,7 @@ export function Hero() {
             playsInline
             poster={imgBentoGrid}
           >
-            <source src="./Videos/Scene (3).mp4" type="video/mp4" />
+            <source src={videoSrc} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Overlay gradient for better blending if needed */}
