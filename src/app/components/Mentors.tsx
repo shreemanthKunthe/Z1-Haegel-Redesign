@@ -180,7 +180,9 @@ function MobileMentorCard({ name, email, imgInfo, bio, role }: { name: string, e
 export function Mentors() {
     return (
         <div className="relative bg-white pt-[80px] md:pt-[120px] pb-[80px] md:pb-[100px] w-full max-w-[1440px] mx-auto px-4 md:px-0">
-            <BackgroundCombined />
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <BackgroundCombined />
+            </div>
 
             {/* Title */}
             <div data-aos="fade-up" className="relative pl-0 md:pl-[80px] mb-12 md:mb-20 z-10 px-4 md:px-0">
