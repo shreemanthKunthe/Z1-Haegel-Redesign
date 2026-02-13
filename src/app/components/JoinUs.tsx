@@ -1,4 +1,4 @@
-import React from "react";
+
 
 function RegisterButton() {
   return (
@@ -50,7 +50,7 @@ function FeatureBox() {
 function JoinUsText() {
   return (
     <div className="flex flex-col md:flex-row justify-between items-end w-full mb-12" data-aos="fade-up">
-      <div className="font-['Instrument_Sans',sans-serif] font-normal text-[80px] md:text-[105px] text-white tracking-[-5px] leading-[1]" style={{ fontVariationSettings: "'wdth' 100" }}>
+      <div className="font-['Instrument_Sans',sans-serif] font-normal text-[56px] md:text-[105px] text-white tracking-[-2px] md:tracking-[-5px] leading-[1]" style={{ fontVariationSettings: "'wdth' 100" }}>
         Join us
       </div>
       {/* All events button */}

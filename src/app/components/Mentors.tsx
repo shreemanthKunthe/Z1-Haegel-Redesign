@@ -1,5 +1,4 @@
-import React from "react";
-import imgRectangle4 from "../../assets/ece298d0ec2c16f10310d45724b276a6035cb503.png";
+
 import imgRectangle5 from "../../assets/560271557bb07c471c55ef9c42f4df293577d717.png";
 import imgRectangle6 from "../../assets/21b7cde0981dc9485604d74a21e7cb4a6b1c9a2d.png";
 import imgRectangle3 from "../../assets/69a30befb5db524cb0cc32c201e2bd65253ee0f1.png";
@@ -155,18 +154,41 @@ function MentorCard2() {
     )
 }
 
+
+function MobileMentorCard({ name, email, imgInfo, bio, role }: { name: string, email: string, imgInfo: string, bio: string, role: string }) {
+    return (
+        <div className="relative bg-white rounded-[24px] shadow-sm overflow-hidden border border-gray-100 p-6 flex flex-col gap-6">
+            <div className="w-full aspect-square rounded-[24px] overflow-hidden relative bg-gray-100">
+                <img src={imgInfo} alt={name} className="w-full h-full object-cover" />
+            </div>
+
+            <div className="flex flex-col gap-2">
+                <h3 className="font-['Instrument_Sans',sans-serif] font-bold text-[28px] text-[#303030] leading-none">{name}</h3>
+                <p className="font-['Instrument_Sans',sans-serif] font-normal text-[14px] text-gray-500">{email}</p>
+                <p className="font-['Instrument_Sans',sans-serif] font-semibold text-[12px] text-gray-400 uppercase tracking-wide mt-2">{role}</p>
+            </div>
+
+            <div className="mt-2">
+                <p className="font-['Instrument_Sans',sans-serif] font-normal text-[16px] text-[#303030] leading-relaxed">
+                    {bio}
+                </p>
+            </div>
+        </div>
+    )
+}
+
 export function Mentors() {
     return (
-        <div className="relative bg-white pt-[120px] pb-[100px] w-full max-w-[1440px] mx-auto px-4 md:px-0">
+        <div className="relative bg-white pt-[80px] md:pt-[120px] pb-[80px] md:pb-[100px] w-full max-w-[1440px] mx-auto px-4 md:px-0">
             <BackgroundCombined />
 
             {/* Title */}
-            <div data-aos="fade-up" className="relative pl-4 md:pl-[80px] mb-20 z-10">
-                <div className="flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] text-[48px] md:text-[105.51px] text-black tracking-[-2px] md:tracking-[-2.6385px] whitespace-nowrap mb-6" style={{ fontVariationSettings: "'wdth' 100" }}>
+            <div data-aos="fade-up" className="relative pl-0 md:pl-[80px] mb-12 md:mb-20 z-10 px-4 md:px-0">
+                <div className="flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[1] text-[48px] md:text-[105.51px] text-black tracking-[-2px] md:tracking-[-2.6385px] mb-6" style={{ fontVariationSettings: "'wdth' 100" }}>
                     <p className="leading-[1.1] md:leading-[1.1]">Our Mentors</p>
                 </div>
-                <div className="flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] text-[12px] md:text-[13.127px] text-black w-full max-w-[673.496px]" style={{ fontVariationSettings: "'wdth' 100" }}>
-                    <p className="leading-[1.3] md:leading-[17.065px] whitespace-pre-wrap">Our mentors aren't just instructors — they're active builders, designers, and engineers working on real projects. They bring industry experience, practical thinking, and hands-on guidance to help you grow with clarity and confidence.</p>
+                <div className="flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] text-[14px] md:text-[13.127px] text-black w-full max-w-[673.496px]" style={{ fontVariationSettings: "'wdth' 100" }}>
+                    <p className="leading-[1.5] md:leading-[17.065px] whitespace-pre-wrap">Our mentors aren't just instructors — they're active builders, designers, and engineers working on real projects. They bring industry experience, practical thinking, and hands-on guidance to help you grow with clarity and confidence.</p>
                 </div>
             </div>
 
@@ -174,8 +196,23 @@ export function Mentors() {
                 <MentorCard1 />
                 <MentorCard2 />
             </div>
-            <div className="md:hidden mt-[50px] px-4 text-center text-gray-500">
-                <p>Mentor profiles are best viewed on larger screens</p>
+
+            {/* Mobile View */}
+            <div className="md:hidden flex flex-col gap-8 relative z-20 px-0">
+                <MobileMentorCard
+                    name="Deepak Mehta"
+                    email="kenzi.lawson@example.com"
+                    role="TALGH / ART DIRECTION, 3D DESIGN"
+                    imgInfo="/images/mentor1.png"
+                    bio="I usually open learning apps when I’m already tired — late at night or after long workdays. Most of the time, I end up closing them before I even start because everything feels too heavy. This experience felt different. It didn’t ask me to push harder."
+                />
+                <MobileMentorCard
+                    name="Gautam Shigaokar"
+                    email="kenzi.lawson@example.com"
+                    role="TALGH / ART DIRECTION, 3D DESIGN"
+                    imgInfo="/images/mentor2.png"
+                    bio="I usually open learning apps when I’m already tired — late at night or after long workdays. Most of the time, I end up closing them before I even start because everything feels too heavy. This experience felt different. It didn’t ask me to push harder."
+                />
             </div>
         </div>
     );

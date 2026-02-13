@@ -1,4 +1,4 @@
-import React from "react";
+
 import svgPaths from "../../imports/svg-oqus49gwxv";
 
 function AccentContainer() {

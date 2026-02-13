@@ -1,4 +1,4 @@
-import React from "react";
+
 import { imgImage1 } from "../../imports/svg-5p28p";
 import imgImage2 from "../../assets/f7c887c7257f2c8874cbfbfa2041a1818075d5bd.png";
 import imgImage3 from "../../assets/0ac800ad0ac0909c59fdddf651ced8328cb02942.png";
@@ -137,25 +137,51 @@ function Grid() {
     )
 }
 
+
+function MobileTestimonialCard({ number, title, author, img }: { number: string, title: string, author: string, img: string }) {
+    return (
+        <div className="flex flex-col gap-4 mb-12">
+            <div className="flex items-end justify-between border-b border-black pb-2">
+                <span className="font-['Instrument_Sans',sans-serif] text-[48px] leading-none tracking-tighter">{number}</span>
+                <div className="text-right">
+                    <p className="font-['Instrument_Sans',sans-serif] font-bold text-[18px]">{title}</p>
+                    <p className="font-['Instrument_Sans',sans-serif] text-[14px] text-gray-600">{author}</p>
+                </div>
+            </div>
+            <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-100">
+                <img src={img} alt={title} className="w-full h-full object-cover" />
+            </div>
+        </div>
+    );
+}
+
 export function Testimonials() {
     return (
-        <div className="relative bg-white min-h-[1610px] w-full max-w-[1440px] mx-auto overflow-hidden px-4 md:px-0">
-            <Backgroung />
-            <Backgroung1 />
+        <div className="relative bg-white min-h-auto md:min-h-[1610px] w-full max-w-[1440px] mx-auto overflow-hidden px-4 md:px-0 pb-20 md:pb-0">
+            {/* Backgrounds - keep absolute for desktop but manage for mobile */}
+            <div className="hidden md:block">
+                <Backgroung />
+                <Backgroung1 />
+            </div>
 
             {/* Text */}
-            <div className="absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] left-4 md:left-[80px] text-[48px] md:text-[105.51px] text-black top-[80px] md:top-[121.5px] tracking-[-2px] md:tracking-[-2.6385px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+            <div className="relative md:absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[1] left-0 md:left-[80px] text-[48px] md:text-[105.51px] text-black top-[40px] md:top-[121.5px] tracking-[-2px] md:tracking-[-2.6385px] whitespace-nowrap mb-6" style={{ fontVariationSettings: "'wdth' 100" }}>
                 <p className="leading-[1.1] md:leading-[60.792px]">Testimonials</p>
             </div>
-            <div className="absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] left-4 md:left-[80px] text-[12px] md:text-[13.127px] text-black top-[140px] md:top-[201.5px] w-full max-w-[673.496px] pr-4" style={{ fontVariationSettings: "'wdth' 100" }}>
-                <p className="leading-[1.3] md:leading-[17.065px] whitespace-pre-wrap">Growth looks different for everyone — but consistent learning leads to real change. Hear from learners who built skills, gained confidence, and turned knowledge into action.</p>
+            <div className="relative md:absolute flex flex-col font-['Instrument_Sans',sans-serif] font-normal justify-center leading-[0] left-0 md:left-[80px] text-[14px] md:text-[13.127px] text-black mt-8 md:mt-0 top-0 md:top-[201.5px] w-full max-w-[673.496px] pr-0 md:pr-4 mb-12" style={{ fontVariationSettings: "'wdth' 100" }}>
+                <p className="leading-[1.5] md:leading-[17.065px] whitespace-pre-wrap">Growth looks different for everyone — but consistent learning leads to real change. Hear from learners who built skills, gained confidence, and turned knowledge into action.</p>
             </div>
 
             <div className="hidden md:block">
                 <Grid />
             </div>
-            <div className="md:hidden mt-[250px] px-4 text-center text-gray-500">
-                <p>Testimonial gallery is best viewed on larger screens</p>
+
+            {/* Mobile View */}
+            <div className="md:hidden mt-8">
+                <MobileTestimonialCard number="01" title="Dreamy Flowers" author="Behance: Omar Aqil" img={imgImage2} />
+                <MobileTestimonialCard number="02" title="LUMI" author="Lumi by Roli" img={imgImage4} />
+                <MobileTestimonialCard number="03" title="LUMI" author="Lumi by Roli" img={imgImage6} />
+                <MobileTestimonialCard number="04" title="Type Balance" author="Antian Lmeri" img={imgImage2} />
             </div>
         </div>
     );

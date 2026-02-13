@@ -1,7 +1,8 @@
-import React from "react";
+import { useState } from "react";
 import svgPaths from "../../imports/svg-oqus49gwxv";
 import imgBentoGrid from "../../assets/47f541c0e046bff0b94914a0e76c698fbcd23347.png";
 import videoSrc from "../../../Videos/Scene (3).mp4";
+import { Menu, X } from "lucide-react";
 
 function BackgroundLines() {
   return (
@@ -95,20 +96,54 @@ function SearchIcon() {
   );
 }
 
+
 function NavBar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div
-      data-aos="fade-down"
-      data-aos-duration="1200"
-      className="absolute top-[40px] left-0 w-full px-4 md:px-[60px] flex justify-between items-center z-20"
-    >
-      <p className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[24px] md:text-[40px] text-black">Z1</p>
-      <NavMenu />
-      <div className="flex gap-4 items-center">
-        <SearchIcon />
-        <UserIcon />
+    <>
+      <div
+        data-aos="fade-down"
+        data-aos-duration="1200"
+        className="absolute top-[30px] md:top-[40px] left-0 w-full px-4 md:px-[60px] flex justify-between items-center z-50"
+      >
+        <p className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[24px] md:text-[40px] text-black z-50 relative">Z1</p>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:block">
+          <NavMenu />
+        </div>
+
+        {/* Desktop Icons */}
+        <div className="hidden md:flex gap-4 items-center">
+          <SearchIcon />
+          <UserIcon />
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden z-50 relative"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X size={24} color="black" /> : <Menu size={24} color="black" />}
+        </button>
       </div>
-    </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-8 md:hidden">
+          {['home', 'projects', 'work', 'about us', 'contact'].map((item) => (
+            <p
+              key={item}
+              className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[24px] text-black capitalize cursor-pointer hover:text-gray-600"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item}
+            </p>
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 
@@ -164,7 +199,7 @@ export function Hero() {
       <DesignerCredit />
       <NavBar />
 
-      <main className="relative z-10 flex flex-col items-center justify-center pt-[140px] sm:pt-[160px] md:pt-[200px] px-4 text-center">
+      <main className="relative z-10 flex flex-col items-center justify-center pt-[110px] sm:pt-[130px] md:pt-[200px] px-4 text-center">
 
         {/* Top Badge */}
         <div className="relative mb-8">

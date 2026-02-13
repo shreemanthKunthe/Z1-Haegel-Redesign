@@ -1,4 +1,4 @@
-import React from "react";
+
 import svgPaths from "../../imports/svg-oqus49gwxv";
 import imgImg from "../../assets/ade7b9f6742178ee817b59205164e5226dbd4c4c.png";
 
@@ -44,11 +44,11 @@ const floatStyle = `
   }
 `;
 
-function Card({ title, desc, left, top, delay = "0s", duration = "6s", className = "absolute" }: { title: string, desc: string, left?: string, top?: string, delay?: string, duration?: string, className?: string }) {
+function Card({ title, desc, left, top, className = "absolute" }: { title: string, desc: string, left?: string, top?: string, className?: string }) {
   return (
     <div
       onClick={() => console.log(`Clicked on ${title}`)}
-      className={`${className} bg-white content-stretch flex flex-col gap-[15.884px] h-[274px] items-start p-[10.589px] rounded-[5.295px] w-[247.527px] cursor-pointer hover:scale-105 transition-all shadow-lg hover:shadow-xl z-10`}
+      className={`${className} bg-white content-stretch flex flex-col gap-[15.884px] h-[274px] items-start p-[10.589px] rounded-[5.295px] w-full md:w-[247.527px] cursor-pointer hover:scale-105 transition-all shadow-lg hover:shadow-xl z-10`}
       style={{
         left,
         top,
@@ -111,7 +111,7 @@ function Primary() {
 
 export function Opportunities() {
   return (
-    <div className="relative bg-white min-h-[900px] w-full max-w-[1440px] mx-auto overflow-hidden px-4 md:px-0">
+    <div className="relative bg-white min-h-auto md:h-[900px] w-full max-w-[1440px] mx-auto overflow-hidden px-4 md:px-0 py-20 md:py-0">
       <style>{floatStyle}</style>
       <Backgroung2 />
 
@@ -122,66 +122,78 @@ export function Opportunities() {
         </svg>
       </div>
 
-      {/* Heading */}
-      <div
-        data-aos="fade-up"
-        className="absolute left-1/2 -translate-x-1/2 top-[80px] md:top-[calc(50%-180px)] w-full max-w-[673.496px] text-center px-4 flex flex-col items-center"
-      >
-        <p className="font-['Instrument_Sans',sans-serif] font-normal text-[32px] md:text-[55.678px] leading-[1.1] md:leading-[60.792px] tracking-[-1.5px] md:tracking-[-2.6385px] text-black" style={{ fontVariationSettings: "'wdth' 100" }}>
-          Endless Opportunities
-        </p>
-        <p className="font-['Instrument_Sans',sans-serif] font-normal text-[12px] md:text-[13.127px] leading-[1.3] md:leading-[17.065px] text-black mt-4 mb-8">
-          Our courses are structured around practical learning — not passive watching. Each path is designed to strengthen fundamentals, push hands-on execution, and guide you toward real-world confidence. Learn progressively, build consistently, and grow with clarity.
-        </p>
+      <div className="relative flex flex-col items-center md:block h-full">
+        {/* Heading */}
+        <div
+          className="relative md:absolute md:left-1/2 md:-translate-x-1/2 md:top-1/2 md:-translate-y-1/2 w-full max-w-[673.496px] text-center px-0 md:px-4 flex flex-col items-center z-20"
+        >
+          <p
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="font-['Instrument_Sans',sans-serif] font-normal text-[32px] md:text-[55.678px] leading-[1.1] md:leading-[60.792px] tracking-[-1.5px] md:tracking-[-2.6385px] text-black"
+            style={{ fontVariationSettings: "'wdth' 100" }}
+          >
+            Endless Opportunities
+          </p>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="400"
+            className="font-['Instrument_Sans',sans-serif] font-normal text-[16px] md:text-[18px] leading-[1.5] text-black mt-4 mb-8"
+          >
+            Our courses are structured around practical learning — not passive watching. Each path is designed to strengthen fundamentals, push hands-on execution, and guide you toward real-world confidence. Learn progressively, build consistently, and grow with clarity.
+          </p>
 
-        <div className="relative">
-          <Primary />
-          <div className="hidden md:block absolute -left-[80px] top-[0px] pointer-events-none w-[70px] h-[52px]">
-            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 70.593 51.9292">
-              <path d={svgPaths.p788e7c0} id="Vector" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeWidth="1.26884" />
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      {/* Cards - responsive grid on mobile, absolute positioning on desktop */}
-      <div className="md:hidden absolute top-[280px] left-4 right-4 grid grid-cols-1 gap-6 justify-items-center">
-        <Card title="Digital Asset Discovery" desc="Locate and catalogue all your online accounts, from streaming services to bank logins." className="relative" />
-        <Card title="Password Management" desc="Securely store and manage your passwords with ease, ensuring you never lose access." className="relative" delay="1s" />
-        <Card title="Account Monitoring" desc="Receive alerts for suspicious activities on your accounts, helping to protect your assets." className="relative" delay="2s" />
-        <Card title="Two-Factor Authentication" desc="Enhance your security by enabling two-factor authentication on critical accounts." className="relative" delay="3s" />
-      </div>
-
-      {/* Desktop cards */}
-      <div className="hidden md:block">
-        <div data-aos="fade-up" data-aos-delay="0">
-          <Card title="Digital Asset Discovery" desc="Locate and catalogue all your online accounts, from streaming services to bank logins." left="208px" top="91px" />
-        </div>
-        <div data-aos="fade-up" data-aos-delay="100">
-          <Card title="Password Management" desc="Securely store and manage your passwords with ease, ensuring you never lose access." left="135px" top="516px" />
-        </div>
-        <div data-aos="fade-up" data-aos-delay="200">
-          <Card title="Account Monitoring" desc="Receive alerts for suspicious activities on your accounts, helping to protect your assets." left="953px" top="72px" />
-        </div>
-        <div data-aos="fade-up" data-aos-delay="300">
-          <Card title="Two-Factor Authentication" desc="Enhance your security by enabling two-factor authentication on critical accounts." left="1089px" top="505px" />
-        </div>
-      </div>
-
-      {/* Decorative vectors - hide on mobile */}
-      <div className="hidden md:flex absolute h-[184.701px] items-center justify-center left-[1230px] top-[349px] w-[191.611px] pointer-events-none">
-        <div className="flex-none rotate-[18.63deg]">
-          <div className="h-[143px] relative w-[154px]" data-name="Vector">
-            <div className="absolute inset-[-0.48%_-0.45%]">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155.374 144.374">
-                <path d={svgPaths.p34dfa00} id="Vector" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeWidth="1.37366" />
+          <div
+            data-aos="fade-up"
+            data-aos-delay="600"
+            className="relative mb-12 md:mb-0"
+          >
+            <Primary />
+            <div className="hidden md:block absolute -left-[80px] top-[0px] pointer-events-none w-[70px] h-[52px]">
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 70.593 51.9292">
+                <path d={svgPaths.p788e7c0} id="Vector" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeWidth="1.26884" />
               </svg>
             </div>
           </div>
         </div>
+
+        {/* Cards - responsive grid on mobile, absolute positioning on desktop */}
+        <div className="md:hidden grid grid-cols-1 gap-6 w-full max-w-sm mx-auto z-10">
+          <Card title="Digital Asset Discovery" desc="Locate and catalogue all your online accounts, from streaming services to bank logins." className="relative w-full" />
+          <Card title="Password Management" desc="Securely store and manage your passwords with ease, ensuring you never lose access." className="relative w-full" />
+          <Card title="Account Monitoring" desc="Receive alerts for suspicious activities on your accounts, helping to protect your assets." className="relative w-full" />
+          <Card title="Two-Factor Authentication" desc="Enhance your security by enabling two-factor authentication on critical accounts." className="relative w-full" />
+        </div>
+
+        {/* Desktop cards */}
+        <div className="hidden md:block">
+          <div data-aos="fade-up" data-aos-delay="0">
+            <Card title="Digital Asset Discovery" desc="Locate and catalogue all your online accounts, from streaming services to bank logins." left="calc(50% - 500px)" top="91px" />
+          </div>
+          <div data-aos="fade-up" data-aos-delay="100">
+            <Card title="Password Management" desc="Securely store and manage your passwords with ease, ensuring you never lose access." left="calc(50% - 600px)" top="516px" />
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <Card title="Account Monitoring" desc="Receive alerts for suspicious activities on your accounts, helping to protect your assets." left="calc(50% + 250px)" top="72px" />
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300">
+            <Card title="Two-Factor Authentication" desc="Enhance your security by enabling two-factor authentication on critical accounts." left="calc(50% + 350px)" top="505px" />
+          </div>
+        </div>
+
+        {/* Decorative vectors - hide on mobile */}
+        <div className="hidden md:flex absolute h-[184.701px] items-center justify-center left-[calc(50%+450px)] top-[349px] w-[191.611px] pointer-events-none">
+          <div className="flex-none rotate-[18.63deg]">
+            <div className="h-[143px] relative w-[154px]" data-name="Vector">
+              <div className="absolute inset-[-0.48%_-0.45%]">
+                <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 155.374 144.374">
+                  <path d={svgPaths.p34dfa00} id="Vector" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeWidth="1.37366" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-
     </div>
   );
 }
