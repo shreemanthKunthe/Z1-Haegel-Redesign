@@ -263,7 +263,7 @@ export function Hero() {
         data-aos="fade-up"
         data-aos-delay="800"
         data-aos-offset="0"
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] z-0 pointer-events-none translate-y-0 md:translate-y-[10%]"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[175%] sm:w-[130%] md:w-full max-w-[1200px] z-0 pointer-events-none translate-y-[5%] md:translate-y-[10%]"
       >
         <div className="relative w-full rounded-t-2xl overflow-hidden shadow-2xl bg-gray-100">
           <video
