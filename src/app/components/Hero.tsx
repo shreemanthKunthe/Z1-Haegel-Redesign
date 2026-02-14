@@ -185,7 +185,7 @@ function ItsFreeArrow() {
 
 export function Hero() {
   return (
-    <div className="relative bg-white min-h-[1100px] w-full max-w-[1440px] mx-auto overflow-hidden">
+    <div className="relative bg-white min-h-[850px] md:min-h-[1100px] w-full max-w-[1440px] mx-auto overflow-hidden">
 
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -263,7 +263,7 @@ export function Hero() {
         data-aos="fade-up"
         data-aos-delay="800"
         data-aos-offset="0"
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] z-0 pointer-events-none translate-y-[10%]"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] z-0 pointer-events-none translate-y-0 md:translate-y-[10%]"
       >
         <div className="relative w-full rounded-t-2xl overflow-hidden shadow-2xl bg-gray-100">
           <video

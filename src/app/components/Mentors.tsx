@@ -3,6 +3,8 @@ import imgRectangle5 from "../../assets/560271557bb07c471c55ef9c42f4df293577d717
 import imgRectangle6 from "../../assets/21b7cde0981dc9485604d74a21e7cb4a6b1c9a2d.png";
 import imgRectangle3 from "../../assets/69a30befb5db524cb0cc32c201e2bd65253ee0f1.png";
 import imgBackground from "../../assets/598bc72371aceda21e9a625c4945b004b5f47ac1.png";
+import imgMentor1 from "../../assets/images/mentor1.png";
+import imgMentor2 from "../../assets/images/mentor2.png";
 
 function BackgroungLines() {
     return (
@@ -73,7 +75,7 @@ function MentorCard1() {
             </p>
             <div className="absolute h-[609.703px] left-px rounded-[34.044px] top-[242.61px] w-[489px] overflow-hidden">
                 <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[34.044px]">
-                    <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full" src="/images/mentor1.png" />
+                    <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full" src={imgMentor1} />
                     <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full opacity-0" src={imgRectangle5} />
                     <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full opacity-0" src={imgRectangle3} />
                 </div>
@@ -119,7 +121,7 @@ function MentorCard2() {
             </p>
             <div className="absolute h-[609.703px] left-px rounded-[34.044px] top-[242.61px] w-[489px] overflow-hidden">
                 <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[34.044px]">
-                    <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full" src="/images/mentor2.png" />
+                    <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full" src={imgMentor2} />
                     <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full opacity-0" src={imgRectangle5} />
                     <img alt="" className="absolute max-w-none object-cover rounded-[34.044px] size-full opacity-0" src={imgRectangle6} />
                 </div>
@@ -205,14 +207,14 @@ export function Mentors() {
                     name="Deepak Mehta"
                     email="kenzi.lawson@example.com"
                     role="TALGH / ART DIRECTION, 3D DESIGN"
-                    imgInfo="/images/mentor1.png"
+                    imgInfo={imgMentor1}
                     bio="I usually open learning apps when I’m already tired — late at night or after long workdays. Most of the time, I end up closing them before I even start because everything feels too heavy. This experience felt different. It didn’t ask me to push harder."
                 />
                 <MobileMentorCard
                     name="Gautam Shigaokar"
                     email="kenzi.lawson@example.com"
                     role="TALGH / ART DIRECTION, 3D DESIGN"
-                    imgInfo="/images/mentor2.png"
+                    imgInfo={imgMentor2}
                     bio="I usually open learning apps when I’m already tired — late at night or after long workdays. Most of the time, I end up closing them before I even start because everything feels too heavy. This experience felt different. It didn’t ask me to push harder."
                 />
             </div>
